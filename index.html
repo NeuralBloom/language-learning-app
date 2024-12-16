@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Learning App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Language Learning App</h1>
+        
+        <!-- Language Selection -->
+        <div id="language-selection">
+            <label for="language">Choose a Language:</label>
+            <select id="language">
+                <option value="" disabled selected>Select a language</option>
+                <option value="spanish">Spanish</option>
+                <option value="french">French</option>
+                <option value="german">German</option>
+                <!-- Add more languages as desired -->
+            </select>
+        </div>
+        
+        <!-- Flashcards Section -->
+        <div id="flashcards" class="hidden">
+            <h2>Flashcards</h2>
+            <div id="card">
+                <div id="word"></div>
+                <div id="translation" class="hidden"></div>
+            </div>
+            <button id="flip-button">Flip</button>
+            <button id="next-button">Next</button>
+        </div>
+        
+        <!-- Quiz Section -->
+        <div id="quiz" class="hidden">
+            <h2>Quiz Mode</h2>
+            <div id="question"></div>
+            <div id="options"></div>
+            <button id="submit-answer">Submit</button>
+            <div id="quiz-result" class="hidden"></div>
+        </div>
+        
+        <!-- Progress Section -->
+        <div id="progress" class="hidden">
+            <h2>Your Progress</h2>
+            <p>Words Learned: <span id="words-learned">0</span></p>
+        </div>
+        
+        <!-- Add Custom Words Section -->
+        <div id="add-words" class="hidden">
+            <h2>Add Custom Words/Phrases</h2>
+            <form id="add-word-form">
+                <input type="text" id="custom-word" placeholder="Word/Phrase" required>
+                <input type="text" id="custom-translation" placeholder="Translation" required>
+                <button type="submit">Add</button>
+            </form>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
