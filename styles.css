@@ -58,6 +58,13 @@ select {
     align-items: center;
     font-size: 1.5em;
     cursor: pointer;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+#card.flipped {
+    transform: rotateY(180deg);
 }
 
 #flashcards button,
@@ -128,4 +135,16 @@ form button:hover {
 #progress p {
     text-align: center;
     font-size: 1.2em;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px 20px;
+    }
+
+    #card {
+        font-size: 1.2em;
+        padding: 30px 15px;
+    }
 }
